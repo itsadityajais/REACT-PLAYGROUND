@@ -4,7 +4,6 @@ export default function SectionHeader() {
       <div
         style={{
           display: "flex",
-          //   flexDirection: "column",
           margin: "20",
           backgroundColor: "green",
         }}
