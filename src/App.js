@@ -1,9 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Zomato from "./Aniket/zomato-app/App";
+//import { ZomtaoApp } from "./Aanya";
+import { RendringList } from "./Aanya/LearningUI";
 
-function App() {
-  return <Zomato />;
+
+ export function App() {
+  return <RendringList/>
 }
-
-export default App;
