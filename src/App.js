@@ -7,5 +7,3 @@ function App() {
   // return <Zomato />;
   return <PackingList />;
 }
-
-export default App;
