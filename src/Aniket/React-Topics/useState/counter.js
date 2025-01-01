@@ -4,9 +4,9 @@ import { sculptureList } from "./data";
 export function Counter() {
   const [index, setIndex] = useState(0);
   const [showMore, setshowMore] = useState(false);
-  const [text, setText] = useState("Aditya");
+  const [text, setText] = useState("");
   const [liked, setLiked] = useState(true);
-  const [age, setAge] = useState(21);
+  const [age, setAge] = useState(20);
 
   let sculpture = sculptureList[index];
 
@@ -57,13 +57,14 @@ export function Counter() {
         style={{ display: "block", marginTop: 30 }}
         value={text}
         onChange={handleChange}
+        placeholder="Enter your name:"
       />
       <button onClick={() => setAge(age + 1)}>Increment age</button>
       <p>
         Hello, {text} you age {age} years old. 😊
       </p>
 
-      <button onClick={() => setText("Enter Name:")}>Reset</button>
+      <button onClick={() => setText("")}>Reset</button>
 
       <label>
         <input type="checkbox" checked={liked} onChange={handleTick} />I liked
