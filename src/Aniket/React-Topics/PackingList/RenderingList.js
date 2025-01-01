@@ -10,6 +10,7 @@
 // function Item({ name, isPacked }) {
 //   return <li>{isPacked ? name + " ✅" : name + " ❌"}</li>;
 // }
+
 function Item({ name, isPacked }) {
   let itemContent = name;
   if (isPacked) {
@@ -20,8 +21,13 @@ function Item({ name, isPacked }) {
 
 export default function PackingList() {
   return (
-    <section>
-      <h1>PACKING LIST</h1>
+    <section
+      style={{
+        backgroundColor: "blue",
+        color: "yellow",
+      }}
+    >
+      <h1 style={{ color: "red" }}>PACKING LIST</h1>
       <ul>
         <Item name="Shirts" isPacked={true} />
         <Item name="Jeans" isPacked={false} />
