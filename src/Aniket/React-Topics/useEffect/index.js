@@ -1,1 +1,1 @@
-export { CounterUseEffect } from "./useEffect";
+export { CounterUseEffect, WindowSize, MouseLocation } from "./useEffect";
