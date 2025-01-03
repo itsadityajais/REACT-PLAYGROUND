@@ -1,1 +1,1 @@
-export { MyComponent } from "./useEffect";
+export { CounterUseEffect } from "./useEffect";
