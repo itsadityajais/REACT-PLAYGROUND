@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-
 export function CounterInsideDiv() {
   const [showsecondCounter, setshowsecondCounter] = useState(true);
-  let result = <Counter />;
+  const [isFancy, setisFancy] = useState(false);
+  // let result = <Counter />;
 
   return (
     <div>
-      {result}
-      {showsecondCounter ? result : null}
+      <Counter />
+      {showsecondCounter ? <Counter isFancy_={isFancy} /> : null}
       <label>
         <input
           type="checkbox"
@@ -15,19 +15,24 @@ export function CounterInsideDiv() {
         ></input>
         Render the second counter
       </label>
+      <label>
+        <input type="checkbox" onChange={() => setisFancy(!isFancy)}></input>
+        Make it Fancy
+      </label>
     </div>
   );
 }
-function Counter() {
+
+function Counter({ isFancy_ }) {
   const [score, setScore] = useState(0);
 
   function IncreaseCounter() {
     setScore(score + 1);
   }
   return (
-    <>
+    <div style={{ backgroundColor: isFancy_ ? "red" : null }}>
       <h1>{score}</h1>
       <button onClick={IncreaseCounter}> ADD</button>
-    </>
+    </div>
   );
 }
