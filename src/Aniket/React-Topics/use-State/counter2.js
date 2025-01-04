@@ -6,8 +6,8 @@ export function CounterInsideDiv() {
 
   return (
     <div>
-      {isFancy ? <Counter isFancy={true} /> : <Counter isFancy={false} />}
-      {showsecondCounter ? <Counter isFancy_={isFancy} /> : null}
+      {isFancy ? <Counter isFancy_={true} /> : <Counter isFancy_={false} />}
+      {showsecondCounter ? <Counter /> : null}
       <label>
         <input
           type="checkbox"
