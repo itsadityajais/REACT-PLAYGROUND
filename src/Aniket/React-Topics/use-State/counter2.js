@@ -6,7 +6,7 @@ export function CounterInsideDiv() {
 
   return (
     <div>
-      <Counter />
+      {isFancy ? <Counter isFancy={true} /> : <Counter isFancy={false} />}
       {showsecondCounter ? <Counter isFancy_={isFancy} /> : null}
       <label>
         <input
