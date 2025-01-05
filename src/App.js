@@ -6,6 +6,7 @@ import {
   MouseLocation,
 } from "./Aniket/React-Topics/useEffect/useEffect";
 import { CounterInsideDiv, ScoreBoard } from "./Aniket/React-Topics/use-State";
+import { Todolist } from "./Aniket/ToDoList";
 
 function App() {
   // return <Zomato />; ///
@@ -20,12 +21,13 @@ function App() {
   //     <MouseLocation />
   //   </>
   // );
-  return (
-    <div>
-      <CounterInsideDiv />
-      <ScoreBoard />
-    </div>
-  );
+  // return (
+  //   <div>
+  //     <CounterInsideDiv />
+  //     <ScoreBoard />
+  //   </div>
+  // );
+  return <Todolist />;
 }
 
 export default App;
