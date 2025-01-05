@@ -5,7 +5,8 @@ import {
   CounterUseEffect,
   MouseLocation,
 } from "./Aniket/React-Topics/useEffect/useEffect";
-import { CounterInsideDiv } from "./Aniket/React-Topics/use-State";
+import { CounterInsideDiv, ScoreBoard } from "./Aniket/React-Topics/use-State";
+
 function App() {
   // return <Zomato />; ///
   // return <PackingList />;
@@ -19,7 +20,12 @@ function App() {
   //     <MouseLocation />
   //   </>
   // );
-  return <CounterInsideDiv />;
+  return (
+    <div>
+      <CounterInsideDiv />
+      <ScoreBoard />
+    </div>
+  );
 }
 
 export default App;
