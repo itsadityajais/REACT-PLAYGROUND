@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./todolistApp.css";
 
 export function Todolist() {
   const [tasks, setTasks] = useState([]);
@@ -34,9 +35,32 @@ export function Todolist() {
     setTasks(temp);
   }
 
+  function moveTaskUp(index) {
+    let temp = [];
+    for (let i = 0; i < tasks.length; i++) {
+      temp.push(tasks[i]);
+    }
+    if (index === 0) return;
+    let tempVar = temp[index];
+    temp[index] = temp[index - 1];
+    temp[index - 1] = tempVar;
+    setTasks(temp);
+  }
+  function moveTaskDown(index) {
+    let temp = [];
+    for (let i = 0; i < tasks.length; i++) {
+      temp.push(tasks[i]);
+    }
+    if (index === tasks.length - 1) return;
+    let tempVar = temp[index];
+    temp[index] = temp[index + 1];
+    temp[index + 1] = tempVar;
+    setTasks(temp);
+  }
+
   return (
-    <div>
-      <h1> To Do List</h1>
+    <div className="to-do-list">
+      <h1> To-Do-List</h1>
       <div>
         <input
           type="text"
@@ -44,12 +68,28 @@ export function Todolist() {
           onChange={handleInputChange}
           value={newTaskItem}
         ></input>
-        <button onClick={handleClick}>Add</button>
+        <button className="add-button" onClick={handleClick}>
+          Add
+        </button>
         <ol>
           {tasks.map((item, index) => (
             <li>
               {item}
-              <button onClick={() => deleteTask(index)}>Delete</button>
+              <button
+                className="delete-button"
+                onClick={() => deleteTask(index)}
+              >
+                Delete
+              </button>
+              <button className="move-button" onClick={() => moveTaskUp(index)}>
+                👆
+              </button>
+              <button
+                className="move-button"
+                onClick={() => moveTaskDown(index)}
+              >
+                👇
+              </button>
             </li>
           ))}
         </ol>
