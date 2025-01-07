@@ -58,19 +58,29 @@ export function Todolist() {
     setTasks(temp);
   }
 
+  function handleKeyPress(e) {
+    if (e.key === "Enter") {
+      handleClick();
+    }
+  }
+
   return (
     <div className="to-do-list">
       <h1> To-Do-List</h1>
       <div>
-        <input
-          type="text"
-          placeholder="Enter a Task.."
-          onChange={handleInputChange}
-          value={newTaskItem}
-        ></input>
-        <button className="add-button" onClick={handleClick}>
-          Add
-        </button>
+        <div className="input-div">
+          <input
+            type="text"
+            placeholder="Enter a Task.."
+            onChange={handleInputChange}
+            onKeyDown={handleKeyPress}
+            value={newTaskItem}
+          ></input>
+          <button className="add-button" onClick={handleClick}>
+            Add
+          </button>
+        </div>
+
         <ol>
           {tasks.map((item, index) => (
             <li>

@@ -1,1 +1,4 @@
-export { CounterUseEffect, WindowSize, MouseLocation } from "./useEffect";
+import { UseEffectLogic } from "./useEffect";
+
+// export { CounterUseEffect, WindowSize, MouseLocation } from "./useEffect";
+export { UseEffectLogic } from "./useEffect";
