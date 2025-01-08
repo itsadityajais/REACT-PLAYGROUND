@@ -7,7 +7,7 @@
 
     
 }
-  export function RendringList(){
+  export function Conditional_Rendaring(){
     return (
         <section>
             <h1>PACKING</h1>
