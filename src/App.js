@@ -6,7 +6,8 @@
 // import Pure, { Pure2 } from "./Aanya/LearningUI/Pure2";
 // import Gallery from "./Aanya/State/App";
 // import Test from "./Aanya/State/Test";
-import Challenge2 from "./Aanya/React-Topics/Managing State/Challenge2";
+//import Challenge2 from "./Aanya/React-Topics/Managing State/Challenge2";
+import { PreserveState } from "./Aanya/React-Topics/Managing State/PreserveState";
 //mport Challenge1 from "./Aanya/React-Topics/Managing State/UI change State Change/Challenge1";
 
 
@@ -15,5 +16,5 @@ import Challenge2 from "./Aanya/React-Topics/Managing State/Challenge2";
   //return <PackingList />;
   //return <Conditional_Rendaring/>;
   //return <RendaringList/>;
-  return <Challenge2/>
+  return <PreserveState/>
  }
