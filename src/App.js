@@ -1,17 +1,19 @@
 import ScientistsList from "./Aniket/React-Topics/ScientistsList/ScientistsList";
-import { WindowSize } from "./Aniket/React-Topics/useEffect";
+import { WindowSize } from "./Aniket/React-Topics/use-Effect";
 import { Counter } from "./Aniket/React-Topics/use-State/counter";
 import {
   CounterUseEffect,
   MouseLocation,
   UseEffectLogic,
-} from "./Aniket/React-Topics/useEffect/useEffect";
+} from "./Aniket/React-Topics/use-Effect/useEffect";
 import { CounterInsideDiv, ScoreBoard } from "./Aniket/React-Topics/use-State";
 import { Todolist } from "./Aniket/ToDoList";
 import { Messenger } from "./Aniket/React-Topics/messenger";
+import { Accordian } from "./Aniket/accordian";
+import { RandomColor } from "./Aniket/randomColor";
 import { PreserveState } from "./Aanya/React-Topics/Managing State/PreserveState";
 
-function App() {
+export function App() {
   // return <Zomato />; ///
   // return <PackingList />;
   // return <ScientistsList />;
@@ -30,8 +32,8 @@ function App() {
   //     <ScoreBoard />
   //   </div>
   // );
-  // return <Todolist />;
-  //
   // return <UseEffectLogic />;
-  return <PreserveState />;
+  // return <Todolist />;
+  // return <Accordian />;
+  return <RandomColor />;
 }

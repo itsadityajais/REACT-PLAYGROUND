@@ -66,10 +66,11 @@ export function Todolist() {
 
   return (
     <div className="to-do-list">
-      <h1> To-Do-List</h1>
+      <h1 className="header"> To-Do-List</h1>
       <div>
         <div className="input-div">
           <input
+            className="input-box"
             type="text"
             placeholder="Enter a Task.."
             onChange={handleInputChange}
@@ -81,9 +82,9 @@ export function Todolist() {
           </button>
         </div>
 
-        <ol>
+        <ol className="list">
           {tasks.map((item, index) => (
-            <li>
+            <li className="list-items">
               {item}
               <button
                 className="delete-button"

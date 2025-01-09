@@ -1,0 +1,1 @@
+export { RandomColor } from "./randomColorGenerator";
