@@ -10,6 +10,7 @@ import { CounterInsideDiv, ScoreBoard } from "./Aniket/React-Topics/use-State";
 import { Todolist } from "./Aniket/ToDoList";
 import { Messenger } from "./Aniket/React-Topics/messenger";
 import { Accordian } from "./Aniket/accordian";
+import { RandomColor } from "./Aniket/randomColor";
 
 export function App() {
   // return <Zomato />; ///
@@ -30,7 +31,8 @@ export function App() {
   //     <ScoreBoard />
   //   </div>
   // );
-  // return <Todolist />;
-  return <Accordian />;
   // return <UseEffectLogic />;
+  // return <Todolist />;
+  // return <Accordian />;
+  return <RandomColor />;
 }
