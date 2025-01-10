@@ -1,5 +1,10 @@
 import { images } from "../constants/BE-images";
 import React, { useState } from "react";
+import {
+  IoIosArrowDropleftCircle,
+  IoIosArrowDroprightCircle,
+} from "react-icons/io";
+
 export function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -33,59 +38,69 @@ export function ImageSlider() {
   }
 
   return (
-    <div>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        height: "100vh",
+        textAlign: "center",
+      }}
+    >
       <h1>Image Slider</h1>
-      <div>{indicators}</div>
-      <button onClick={previousImage}>Previous</button>
-      <button onClick={nextImage}>Next</button>
-      <br />
-      <img style={{ width: "50%" }} src={images[currentIndex]} />
-      <div>
-        <div
-          onClick={() => goToImage(0)}
+      <div
+        style={{ position: "relative", display: "inline-block", width: "50%" }}
+      >
+        <img
+          style={{ width: "100%" }}
+          src={images[currentIndex]}
+          alt="slider"
+        />
+
+        {/* Previous Button */}
+        <IoIosArrowDropleftCircle
+          size={40}
+          onClick={previousImage}
           style={{
-            width: "20px",
-            height: "20px",
-            borderRadius: "50%",
-            backgroundColor: currentIndex == 0 ? "red" : "gray",
+            position: "absolute",
+            top: "50%",
+            left: "0",
+            transform: "translateY(-50%)",
+            color: currentIndex == 0 ? "gray" : "red",
+            padding: "10px",
+            cursor: "pointer",
           }}
-        ></div>
-        <div
-          onClick={() => goToImage(1)}
+        />
+
+        {/* Next Button */}
+        <IoIosArrowDroprightCircle
+          size={40}
+          onClick={nextImage}
           style={{
-            width: "20px",
-            height: "20px",
-            borderRadius: "50%",
-            backgroundColor: "gray",
+            position: "absolute",
+            top: "50%",
+            left: "92%",
+            transform: "translateY(-50%)",
+            color: currentIndex == images.length - 1 ? "gray" : "red",
+            padding: "10px",
+            cursor: "pointer",
           }}
-        ></div>
+        />
+
+        {/* Indicators */}
         <div
-          onClick={() => goToImage(2)}
           style={{
-            width: "20px",
-            height: "20px",
-            borderRadius: "50%",
-            backgroundColor: "gray",
+            position: "absolute",
+            bottom: "10px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            display: "flex",
+            gap: "5px",
           }}
-        ></div>
-        <div
-          onClick={() => goToImage(3)}
-          style={{
-            width: "20px",
-            height: "20px",
-            borderRadius: "50%",
-            backgroundColor: "gray",
-          }}
-        ></div>
-        <div
-          onClick={() => goToImage(4)}
-          style={{
-            width: "20px",
-            height: "20px",
-            borderRadius: "50%",
-            backgroundColor: "gray",
-          }}
-        ></div>
+        >
+          {indicators}
+        </div>
       </div>
     </div>
   );
