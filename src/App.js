@@ -11,7 +11,11 @@ import { Todolist } from "./Aniket/ToDoList";
 import { Messenger } from "./Aniket/React-Topics/messenger";
 import { Accordian } from "./Aniket/accordian";
 import { RandomColor } from "./Aniket/randomColor";
+<<<<<<< Updated upstream
 import { PreserveState } from "./Aanya/React-Topics/Managing State/PreserveState";
+=======
+import { StarRating } from "./Aniket/starRating";
+>>>>>>> Stashed changes
 
 export function App() {
   // return <Zomato />; ///
@@ -35,5 +39,6 @@ export function App() {
   // return <UseEffectLogic />;
   // return <Todolist />;
   // return <Accordian />;
-  return <RandomColor />;
+  // return <RandomColor />;
+  return <StarRating />;
 }
