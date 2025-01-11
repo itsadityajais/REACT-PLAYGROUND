@@ -1,5 +1,5 @@
 import { images } from "../constants/BE-images";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
@@ -9,29 +9,40 @@ export function ImageSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   function nextImage() {
-    if (currentIndex < images.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
   }
+
   function previousImage() {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
   }
+
   function goToImage(index) {
     setCurrentIndex(index);
   }
+
+  // Automatically slide the images
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextImage();
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
+  }, [currentIndex]);
 
   const indicators = [];
   for (let i = 0; i < images.length; i++) {
     indicators.push(
       <div
         onClick={() => goToImage(i)}
+        key={i}
         style={{
-          width: "20px",
-          height: "20px",
+          width: "15px",
+          height: "15px",
           borderRadius: "50%",
-          backgroundColor: currentIndex == i ? "red" : "gray",
+          backgroundColor: currentIndex === i ? "white" : "gray",
+          cursor: "pointer",
         }}
       ></div>
     );
@@ -67,7 +78,7 @@ export function ImageSlider() {
             top: "50%",
             left: "0",
             transform: "translateY(-50%)",
-            color: currentIndex == 0 ? "gray" : "red",
+            color: "white",
             padding: "10px",
             cursor: "pointer",
           }}
@@ -82,7 +93,7 @@ export function ImageSlider() {
             top: "50%",
             left: "92%",
             transform: "translateY(-50%)",
-            color: currentIndex == images.length - 1 ? "gray" : "red",
+            color: "white",
             padding: "10px",
             cursor: "pointer",
           }}
