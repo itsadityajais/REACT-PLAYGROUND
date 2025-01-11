@@ -4,4 +4,6 @@ export const images = [
   "https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_640.jpg",
   "https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?cs=srgb&dl=pexels-joshsorenson-1714208.jpg&fm=jpg",
   "https://www.usnews.com/object/image/00000189-08bb-dd44-af8d-0cbf10690000/florida.jpg?update-time=1688069275350&size=responsive640",
+  "https://i.ytimg.com/vi/betqyfOW6cY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBYgTXgDNXw3RyX9W7vU1M23GtuvQ",
+  "https://www.cultofmac.com/wp-content/uploads/2023/04/Setups-JVillaPhoto-1-April-14-2023.jpg",
 ];
