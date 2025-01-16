@@ -14,6 +14,10 @@ import { RandomColor } from "./Aniket/randomColor";
 import { PreserveState } from "./Aanya/React-Topics/Managing State/PreserveState";
 import { StarRating } from "./Aniket/starRating";
 import { ImageSlider } from "./Aniket/slider";
+import { LoadMore } from "./Aniket/loadMoreData";
+import { TreeView } from "./Aniket/menuList";
+import menus, { menuData } from "./Aniket/menuList/data";
+import { QRCodeGenerator } from "./Aniket/qrCodeGenerator";
 
 export function App() {
   // return <Zomato />; ///
@@ -40,5 +44,8 @@ export function App() {
   // return <RandomColor />;
   // return <StarRating noOfStars={5} />;
   // return <StarRating />;
-  return <ImageSlider />;
+  // return <ImageSlider />;
+  // return <LoadMore />;
+  return <TreeView menus={menuData} />;
+  // return <QRCodeGenerator />;
 }

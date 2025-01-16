@@ -11,7 +11,7 @@ export default function ContactList({ contacts, onSelect }) {
   }
   return (
     <div>
-      <ul>{contactNames}</ul>
+      <ul className="list">{contactNames}</ul>
     </div>
   );
 }
