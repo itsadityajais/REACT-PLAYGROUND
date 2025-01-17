@@ -1,14 +1,14 @@
-import ScientistsList from "./Aniket/React-Topics/ScientistsList/ScientistsList";
-import { WindowSize } from "./Aniket/React-Topics/use-Effect";
-import { Counter } from "./Aniket/React-Topics/use-State/counter";
+import ScientistsList from "./Aniket/reactWebsite/ScientistsList/ScientistsList";
+import { WindowSize } from "./Aniket/reactWebsite/use-Effect";
+import { Counter } from "./Aniket/reactWebsite/use-State/counter";
 import {
   CounterUseEffect,
   MouseLocation,
   UseEffectLogic,
-} from "./Aniket/React-Topics/use-Effect/useEffect";
-import { CounterInsideDiv, ScoreBoard } from "./Aniket/React-Topics/use-State";
+} from "./Aniket/reactWebsite/use-Effect/useEffect";
+import { CounterInsideDiv, ScoreBoard } from "./Aniket/reactWebsite/use-State";
 import { Todolist } from "./Aniket/ToDoList";
-import { Messenger } from "./Aniket/React-Topics/messenger";
+import { Messenger } from "./Aniket/reactWebsite/messenger";
 import { Accordian } from "./Aniket/accordian";
 import { RandomColor } from "./Aniket/randomColor";
 import { PreserveState } from "./Aanya/React-Topics/Managing State/PreserveState";
