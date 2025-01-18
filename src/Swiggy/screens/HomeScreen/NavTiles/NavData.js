@@ -25,7 +25,7 @@ export const NavData = [
   {
     label: "GENIE",
     description: "PICKUP & DROP",
-    offer: "UPTO 40% OFF",
+
     images: "https://i.imgur.com/TDmaLg5.png",
   },
 ];

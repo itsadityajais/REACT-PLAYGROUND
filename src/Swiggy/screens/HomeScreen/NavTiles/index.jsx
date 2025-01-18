@@ -11,6 +11,7 @@ function Tiles({ label, description, offer, images }) {
         backgroundColor: "white",
         borderRadius: "20px",
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+        position: "relative",
       }}
     >
       <div
@@ -48,10 +49,11 @@ function Tiles({ label, description, offer, images }) {
       </div>
       <img
         style={{
-          marginLeft: "130px",
-          marginTop: "20px",
+          position: "absolute",
           minHeight: "100px",
           minWidth: "100px",
+          bottom: "10px",
+          right: "10px",
         }}
         src={images}
         height={"100px"}
