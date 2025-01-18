@@ -18,6 +18,7 @@ import { LoadMore } from "./Aniket/loadMoreData";
 import { TreeView } from "./Aniket/menuList";
 import menus, { menuData } from "./Aniket/menuList/data";
 import { QRCodeGenerator } from "./Aniket/qrCodeGenerator";
+import { Card } from "./Aniket/cardComponent";
 import SwiggyApp from "./Swiggy/swiggyApp";
 
 export function App() {
