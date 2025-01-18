@@ -9,9 +9,10 @@ function Tiles({ label, description, offer, images }) {
         minHeight: "280px",
         minWidth: "250px",
         backgroundColor: "white",
-        borderRadius: "20px",
+        borderRadius: "30px",
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         position: "relative",
+        padding: "15px",
       }}
     >
       <div
@@ -20,7 +21,6 @@ function Tiles({ label, description, offer, images }) {
           marginBottom: "10px",
           fontSize: "25px",
           fontWeight: "bold",
-          marginLeft: "10px",
         }}
       >
         {label}
@@ -28,10 +28,9 @@ function Tiles({ label, description, offer, images }) {
       <div
         style={{
           marginBottom: "10px",
-          fontSize: "25px",
+          fontSize: "22px",
           fontWeight: "bold",
           color: "gray",
-          marginLeft: "10px",
         }}
       >
         {description}
@@ -39,10 +38,10 @@ function Tiles({ label, description, offer, images }) {
       <div
         style={{
           marginBottom: "10px",
-          fontSize: "25px",
+          fontSize: "18px",
           fontWeight: "bold",
-          color: "orange",
-          marginLeft: "10px",
+          color: "#FF5200",
+          //   marginLeft: "10px",
         }}
       >
         {offer}
@@ -62,29 +61,6 @@ function Tiles({ label, description, offer, images }) {
     </div>
   );
 }
-
-// const tiles = [];
-
-// for (let i = 0; i < NavData.length; i++) {
-//   let item = NavData[i];
-//   tiles.push(
-//     <Tiles
-//       label={item.label}
-//       description={item.description}
-//       offer={item.offer}
-//     />
-//   );
-// }
-
-// let newArray = NavData.map((item) => {
-//   return (
-//     <Tiles
-//       label={item.label}
-//       description={item.description}
-//       offer={item.offer}
-//     />
-//   );
-// });
 
 export function NavTiles() {
   return (
@@ -109,3 +85,25 @@ export function NavTiles() {
     </div>
   );
 }
+// const tiles = [];
+
+// for (let i = 0; i < NavData.length; i++) {
+//   let item = NavData[i];
+//   tiles.push(
+//     <Tiles
+//       label={item.label}
+//       description={item.description}
+//       offer={item.offer}
+//     />
+//   );
+// }
+
+// let newArray = NavData.map((item) => {
+//   return (
+//     <Tiles
+//       label={item.label}
+//       description={item.description}
+//       offer={item.offer}
+//     />
+//   );
+// });

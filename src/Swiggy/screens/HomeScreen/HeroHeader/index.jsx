@@ -2,10 +2,11 @@ export function HeroHeader() {
   return (
     <div
       style={{
-        width: "60%",
+        width: "50%",
         textAlign: "center",
         margin: "0px auto",
         marginBottom: "10px",
+        marginTop: "80px",
       }}
     >
       <h1 style={{ color: "white", fontSize: "48px" }}>
