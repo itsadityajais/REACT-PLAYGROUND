@@ -18,6 +18,7 @@ import { LoadMore } from "./Aniket/loadMoreData";
 import { TreeView } from "./Aniket/menuList";
 import menus, { menuData } from "./Aniket/menuList/data";
 import { QRCodeGenerator } from "./Aniket/qrCodeGenerator";
+import SwiggyApp from "./Swiggy/swiggyApp";
 
 export function App() {
   // return <Zomato />; ///
@@ -46,6 +47,7 @@ export function App() {
   // return <StarRating />;
   // return <ImageSlider />;
   // return <LoadMore />;
-  return <TreeView menus={menuData} />;
+  // return <TreeView menus={menuData} />;
   // return <QRCodeGenerator />;
+  return <SwiggyApp />;
 }
