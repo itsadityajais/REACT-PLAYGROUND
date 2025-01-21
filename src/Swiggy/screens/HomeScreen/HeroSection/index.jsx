@@ -1,6 +1,13 @@
 export function HeroSection({ children }) {
   return (
-    <div style={{ backgroundColor: "#FF5200", minHeight: "800px" }}>
+    <div
+      style={{
+        position: "relative",
+        backgroundColor: "#FF5200",
+        minHeight: "800px",
+        marginBottom: "75px",
+      }}
+    >
       {children}
     </div>
   );

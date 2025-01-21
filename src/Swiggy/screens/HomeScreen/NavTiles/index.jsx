@@ -1,18 +1,21 @@
+import { RestaurantSection } from "../..";
 import { NavData } from "./NavData";
 
 function Tiles({ label, description, offer, images }) {
   return (
-    <div
+    <button
       style={{
         display: "flex",
         flexDirection: "column",
         minHeight: "280px",
-        minWidth: "250px",
+        minWidth: "220px",
         backgroundColor: "white",
         borderRadius: "30px",
         boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
         position: "relative",
         padding: "15px",
+        cursor: "pointer",
+        border: "none",
       }}
     >
       <div
@@ -58,7 +61,7 @@ function Tiles({ label, description, offer, images }) {
         height={"100px"}
         width={"100px"}
       />
-    </div>
+    </button>
   );
 }
 
@@ -69,6 +72,8 @@ export function NavTiles() {
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-evenly",
+        // margin: "100px 0px",
+        padding: "0px 100px",
       }}
     >
       {NavData.map((data) => {

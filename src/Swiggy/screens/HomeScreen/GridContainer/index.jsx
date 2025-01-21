@@ -1,5 +1,3 @@
-import Grocery from "./GroceryData";
-
 function GridItem({ label, image }) {
   return (
     <div
@@ -31,7 +29,7 @@ export function GridContainer({ label, data }) {
       style={{
         display: "flex",
         flexDirection: "column",
-        margin: "75px 150px",
+        margin: "0px 150px",
       }}
     >
       <h2

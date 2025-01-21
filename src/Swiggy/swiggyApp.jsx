@@ -1,9 +1,15 @@
 import React from "react";
-import { HomeScreen } from "./screens";
+import {
+  HomeScreen,
+  RestaurantListScreen,
+  RestaurantMenuScreen,
+} from "./screens";
 export default function SwiggyApp() {
   return (
     <div>
-      <HomeScreen />
+      {/* <HomeScreen /> */}
+      {/* <RestaurantListScreen /> */}
+      <RestaurantMenuScreen />
     </div>
   );
 }
