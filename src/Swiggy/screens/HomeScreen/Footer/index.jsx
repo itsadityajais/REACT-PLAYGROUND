@@ -1,6 +1,8 @@
+import { Line } from "../../../components/Line";
+
 export function Footer() {
   return (
-    <div>
+    <div style={{ backgroundColor: "#F0F0F5" }}>
       <div
         style={{
           display: "flex",
@@ -16,19 +18,12 @@ export function Footer() {
         />
         <span>&copy; {new Date().getFullYear()} ADITYA JAIS</span>
       </div>
-      <div
-        style={{
-          height: "1px",
-          margin: "0px 100px",
-          backgroundColor: "gray",
-        }}
-      ></div>
-
+      <Line />
       <div
         style={{
           display: "flex",
           justifyContent: "space-around",
-          margin: "30px 205px 30px",
+          margin: "30px 205px 0px",
           //   marginLeft: "180px",
         }}
       >

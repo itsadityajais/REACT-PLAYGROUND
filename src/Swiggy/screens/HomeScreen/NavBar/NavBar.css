@@ -5,6 +5,7 @@
   padding: 16px 32px;
   background-color: #ff5200;
   position: relative;
+  margin: 0px 120px;
 }
 
 .navbar img {
@@ -38,10 +39,11 @@
   font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  min-height: 40px;
+  min-height: 50px;
+  min-width: 120px;
 }
 
 .navbar-links button:hover {
-  background-color: #ffe0cc;
-  color: #ff5200;
+  background-color: #000000;
+  color: #ffffff;
 }
