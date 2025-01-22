@@ -7,8 +7,8 @@ import {
 export default function SwiggyApp() {
   return (
     <div>
-      {/* <HomeScreen /> */}
-      {/* <RestaurantListScreen /> */}
+      {/* <HomeScreen />
+      <RestaurantListScreen /> */}
       <RestaurantMenuScreen />
     </div>
   );
