@@ -1,14 +1,18 @@
 import { Line } from "../../../components/Line";
 import { useState } from "react";
+import { RiShoppingBag4Line } from "react-icons/ri";
 
-export function RestaurantMenu({ title, price, description, image, rating }) {
-  const [sum, setSum] = useState(0);
-  function AddCartItems(price) {
-    setSum(sum + price);
-  }
+export function RestaurantMenu({
+  title,
+  price,
+  description,
+  image,
+  rating,
+  add,
+  subtract,
+}) {
   return (
     <div>
-      <h1>{sum}</h1>
       <div
         style={{
           display: "flex",
@@ -74,8 +78,11 @@ export function RestaurantMenu({ title, price, description, image, rating }) {
             width={"150px"}
             src={image}
           />
-          <button
+
+          <div
             style={{
+              display: "flex",
+              alignItems: "center",
               height: "40px",
               width: "100px",
               borderRadius: "10px",
@@ -87,12 +94,40 @@ export function RestaurantMenu({ title, price, description, image, rating }) {
               color: "#19A672",
               fontSize: "16px",
               fontWeight: "600",
-              cursor: "pointer",
             }}
-            onClick={() => AddCartItems(price)}
           >
-            ADD
-          </button>
+            <button
+              style={{
+                height: "30px",
+                width: "100%",
+                border: "none",
+                borderRadius: "5px",
+                backgroundColor: "white",
+                fontSize: "20px",
+                color: "#19A672",
+                cursor: "pointer",
+              }}
+              onClick={() => subtract(price)}
+            >
+              -
+            </button>
+            <span>ADD</span>
+            <button
+              style={{
+                height: "30px",
+                width: "100%",
+                border: "none",
+                borderRadius: "5px",
+                backgroundColor: "white",
+                fontSize: "20px",
+                color: "#19A672",
+                cursor: "pointer",
+              }}
+              onClick={() => add(price)}
+            >
+              +
+            </button>
+          </div>
         </div>
       </div>
       <Line />
@@ -102,6 +137,14 @@ export function RestaurantMenu({ title, price, description, image, rating }) {
 
 export function RestaurantMenuContainer({ data }) {
   const [currFilter, setFilter] = useState(null);
+  const [sum, setSum] = useState(0);
+
+  function handleAdd(price) {
+    setSum(sum + price);
+  }
+  function handleSubtract(price) {
+    setSum(sum - price);
+  }
 
   const filteredData = currFilter
     ? data.filter((item) => {
@@ -154,6 +197,39 @@ export function RestaurantMenuContainer({ data }) {
           Non-Veg
         </button>
       </div>
+      {sum > 0 ? (
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            position: "fixed",
+            bottom: 0,
+            zIndex: 1000,
+            fontSize: "15px",
+            color: "#fff",
+            backgroundColor: "#5FB246",
+            minHeight: "50px",
+            minWidth: "790px",
+            cursor: "pointer",
+          }}
+        >
+          <span style={{ marginLeft: "20px", fontWeight: "500" }}>
+            Total Price: &#8377; {sum}
+          </span>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginRight: "20px",
+              gap: "2px",
+            }}
+          >
+            <span style={{ fontWeight: "800" }}>VIEW CART</span>
+            <RiShoppingBag4Line size={20} />
+          </div>
+        </div>
+      ) : null}
 
       {filteredData.map((item) => (
         <RestaurantMenu
@@ -162,6 +238,8 @@ export function RestaurantMenuContainer({ data }) {
           description={item.description}
           image={item.image}
           rating={item.rating}
+          add={handleAdd}
+          subtract={handleSubtract}
         />
       ))}
     </div>

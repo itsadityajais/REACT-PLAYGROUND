@@ -5,32 +5,35 @@ import Restaurant_Menu from "./Restaurant_menu";
 import { RestaurantMenuContainer } from "./RestaurantMenu";
 export function RestaurantMenuScreen() {
   return (
-    <div>
+    <div style={{ position: "relative" }}>
       <RestaurantListPageHeader />
+      <h1
+        style={{
+          marginLeft: "350px",
+          marginRight: "350px",
+          marginTop: "80px",
+        }}
+      >
+        Chinese Wok
+      </h1>
       <div
         style={{
           height: "150px",
           width: "750px",
           border: "1px solid #D9DADB",
           borderRadius: "10px",
-          margin: "100px 350px 50px 350px",
-          //   marginLeft: "350px",
-          //   marginRight: "350px",
+          margin: "0px 350px 0px 350px",
         }}
       ></div>
 
       <div style={{ marginLeft: "350px", marginRight: "350px" }}>
+        <h3>Deals for you</h3>
         <div
           style={{
             display: "flex",
             gap: "15px",
-            marginTop: "50px",
-            //   width: "50%",
-            //   marginLeft: "350px",
-            //   marginRight: "350px",
             overflow: "scroll",
             scrollbarWidth: "none",
-            // backgroundColor: "rebeccapurple",
           }}
         >
           <Deals
