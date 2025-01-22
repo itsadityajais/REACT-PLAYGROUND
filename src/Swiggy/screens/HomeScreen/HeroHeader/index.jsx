@@ -22,25 +22,35 @@ export function HeroHeader() {
           style={{
             height: "60px",
             width: "250px",
+            padding: "0px 18px",
             borderRadius: "16px",
             border: "1.5px solid rgba(2, 6, 12, 0.15)",
             marginRight: "20px",
+            fontSize: "18px",
+            fontWeight: "700",
+            color: "#676A6D",
           }}
           title="Select Location"
         >
           <option value="Bengaluru">Bengaluru</option>
+          <option value="Bengaluru">Green Glen Layout, Bellandur,</option>
+          <option value="Hansdiha">Hansdiha</option>
+          <option value="Dumka">Dumka</option>
+          <option value="Ranchi">Ranchi</option>
           <option value="Mumbai">Mumbai</option>
           <option value="Kolkata">Kolkata</option>
-          <option value="Hansdiha">Hansdiha</option>
         </select>
         <input
           type="text"
-          placeholder="Search "
+          placeholder="Search for restaurant, item or more "
           style={{
             height: "54px",
             width: "400px",
             borderRadius: "16px",
             border: "1.5px solid rgba(2, 6, 12, 0.15)",
+            fontSize: "18px",
+            fontWeight: "200",
+            padding: "0px 18px",
           }}
         />
         <img

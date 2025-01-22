@@ -7,7 +7,8 @@ import { GridContainer } from "./GridContainer";
 import Grocery from "./GridContainer/GroceryData";
 import Food from "./GridContainer/FoodData";
 import { Footer } from "./Footer";
-import { Banner } from "./Banner";
+import { Banner } from "../../components/Banner";
+
 export function HomeScreen() {
   return (
     <>
