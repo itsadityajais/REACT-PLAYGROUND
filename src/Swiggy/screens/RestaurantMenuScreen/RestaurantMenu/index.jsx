@@ -1,6 +1,7 @@
 import { Line } from "../../../components/Line";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RiShoppingBag4Line } from "react-icons/ri";
+import { RestaurantData } from "../../RestaurantListScreen/RestaurantList/RestaurantData";
 
 export function RestaurantMenu({
   title,
@@ -107,7 +108,12 @@ export function RestaurantMenu({
                 color: "#19A672",
                 cursor: "pointer",
               }}
-              onClick={() => subtract(price)}
+              onClick={() =>
+                subtract({
+                  mytitle: title,
+                  price: price,
+                })
+              }
             >
               -
             </button>
@@ -123,7 +129,12 @@ export function RestaurantMenu({
                 color: "#19A672",
                 cursor: "pointer",
               }}
-              onClick={() => add(price)}
+              onClick={() =>
+                add({
+                  title: title,
+                  price: price,
+                })
+              }
             >
               +
             </button>
@@ -138,13 +149,47 @@ export function RestaurantMenu({
 export function RestaurantMenuContainer({ data }) {
   const [currFilter, setFilter] = useState(null);
   const [sum, setSum] = useState(0);
+  const [selected, setSelected] = useState([]);
 
-  function handleAdd(price) {
-    setSum(sum + price);
+  //   function AddProduct(RestaurantData) {
+  //     return <div>{RestaurantData.price}</div>;
+  //   }
+
+  [
+    {
+      id: "1",
+      title: "Chole Nhature",
+      price: 50,
+      quantity: 2,
+    },
+    {
+      id: "2",
+      title: "Pani puri",
+      price: 50,
+      quantity: 1,
+    },
+  ];
+
+  function handleSubtract(data) {
+    setSelected(data.title);
+    // setSum(sum - price);
   }
-  function handleSubtract(price) {
-    setSum(sum - price);
+  function handleAdd(dataObj) {
+    let tempArr = [];
+    selected.map((item) => {
+      tempArr.push(item);
+    });
+    tempArr.push(dataObj);
+    setSelected(tempArr);
   }
+
+  useEffect(() => {
+    let temp = 0;
+    selected.map((item) => {
+      temp = temp + item.price;
+    });
+    setSum(temp);
+  }, [selected]);
 
   const filteredData = currFilter
     ? data.filter((item) => {
@@ -214,8 +259,11 @@ export function RestaurantMenuContainer({ data }) {
             cursor: "pointer",
           }}
         >
+          {selected.map((item) => {
+            return <div>{item.title}</div>;
+          })}
           <span style={{ marginLeft: "20px", fontWeight: "500" }}>
-            Total Price: &#8377; {sum}
+            &#8377; {sum}
           </span>
           <div
             style={{
@@ -240,6 +288,7 @@ export function RestaurantMenuContainer({ data }) {
           rating={item.rating}
           add={handleAdd}
           subtract={handleSubtract}
+          //   details={AddProduct}
         />
       ))}
     </div>
