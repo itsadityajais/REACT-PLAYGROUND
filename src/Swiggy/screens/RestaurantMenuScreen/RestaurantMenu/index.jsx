@@ -155,20 +155,20 @@ export function RestaurantMenuContainer({ data }) {
   //     return <div>{RestaurantData.price}</div>;
   //   }
 
-  [
-    {
-      id: "1",
-      title: "Chole Nhature",
-      price: 50,
-      quantity: 2,
-    },
-    {
-      id: "2",
-      title: "Pani puri",
-      price: 50,
-      quantity: 1,
-    },
-  ];
+  // [
+  //   {
+  //     id: "1",
+  //     title: "Chole Nhature",
+  //     price: 50,
+  //     quantity: 2,
+  //   },
+  //   {
+  //     id: "2",
+  //     title: "Pani puri",
+  //     price: 50,
+  //     quantity: 1,
+  //   },
+  // ];
 
   function handleSubtract(data) {
     setSelected(data.title);
